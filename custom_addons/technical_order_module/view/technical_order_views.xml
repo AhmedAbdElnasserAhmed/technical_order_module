@@ -1,0 +1,146 @@
+<odoo>
+    <record id="view_technical_order_form" model="ir.ui.view">
+        <field name="name">technical.order.form</field>
+        <field name="model">technical.order</field>
+        <field name="arch" type="xml">
+            <form string="Technical Order">
+                <header>
+                    <button name="submit_for_approval" string="Submit for Approval" type="object"/>
+                    <button name="cancel_order" string="Cancel" type="object"/>
+                    <button name="approve_order" string="Approve" type="object"/>
+                    <button name="reject_order" string="Reject" type="object"/>
+                </header>
+                <sheet>
+                    <!-- Add other fields here -->
+                    <field name="status" widget="statusbar" statusbar_visible="draft,to_approve,approved,rejected,cancelled"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<odoo>-->
+<!--    <record id="view_technical_order_form" model="ir.ui.view">-->
+<!--        <field name="name">technical.order.form</field>-->
+<!--        <field name="model">technical.order</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form string="Technical Order">-->
+<!--                <header>-->
+<!--                    <button name="submit_for_approval" string="Submit for Approval" type="object" states="draft"/>-->
+<!--                    <button name="cancel_order" string="Cancel" type="object" states="draft"/>-->
+<!--                    <button name="approve_order" string="Approve" type="object" states="to_approve"/>-->
+<!--                    <button name="reject_order" string="Reject" type="object" states="to_approve"/>-->
+<!--                </header>-->
+<!--                <sheet>-->
+<!--                    &lt;!&ndash; Add other fields here &ndash;&gt;-->
+<!--                    <field name="status" widget="statusbar" statusbar_visible="draft,to_approve,approved,rejected,cancelled"/>-->
+<!--                </sheet>-->
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
+<!--</odoo>-->
+
+
+
+
+
+
+
+
+
+<!--<odoo>-->
+<!--    <record id="view_technical_order_form" model="ir.ui.view">-->
+<!--        <field name="name">technical.order.form</field>-->
+<!--        <field name="model">technical.order</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form string="Technical Order">-->
+<!--                <header>-->
+<!--                    <button name="submit_for_approval" string="Submit for Approval" type="object" states="draft"/>-->
+<!--                    <button name="cancel_order" string="Cancel" type="object" states="draft"/>-->
+<!--                    <button name="approve_order" string="Approve" type="object" states="to_approve"/>-->
+<!--                    <button name="reject_order" string="Reject" type="object" states="to_approve"/>-->
+<!--                </header>-->
+<!--                <sheet>-->
+<!--                    &lt;!&ndash; Add other fields here &ndash;&gt;-->
+<!--                    <field name="status" widget="statusbar" statusbar_visible="draft,to_approve,approved,rejected,cancelled"/>-->
+<!--                </sheet>-->
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
+<!--</odoo>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<odoo>-->
+<!--    <data>-->
+<!--        &lt;!&ndash; Extend form view of technical.order model &ndash;&gt;-->
+<!--        <record id="view_technical_order_form_inherit" model="ir.ui.view">-->
+<!--            <field name="name">technical.order.form.inherit</field>-->
+<!--            <field name="model">technical.order</field>-->
+<!--            <field name="inherit_id" ref="base.view_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                &lt;!&ndash; Add status field to the form view &ndash;&gt;-->
+<!--&lt;!&ndash;                <field name="status" position="attributes">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <attribute name="statusbar_visible">draft,confirmed,completed,cancelled</attribute>&ndash;&gt;-->
+<!--&lt;!&ndash;                </field>&ndash;&gt;-->
+<!--                <xpath expr="//field[@name='status']" position="attributes">-->
+<!--                    <attribute name="statusbar_visible">draft,confirmed,completed,cancelled</attribute>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--    </data>-->
+<!--</odoo>-->

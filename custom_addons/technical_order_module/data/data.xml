@@ -1,0 +1,15 @@
+<odoo>
+    <!-- Define the top-level menu "Store Orders" -->
+    <menuitem id="menu_store_orders" name="Store Orders" sequence="10"/>
+
+    <!-- Define the sub-menu "Orders" -->
+    <menuitem id="menu_orders" name="Orders" parent="menu_store_orders" action="action_orders" sequence="10"/>
+
+    <!-- Define the action for the "Orders" sub-menu, linking it to the technical.order model -->
+    <record id="action_orders" model="ir.actions.act_window">
+        <field name="name">Orders</field>
+        <field name="res_model">technical.order</field>
+        <field name="view_mode">tree,form</field> <!-- You can add other view modes as needed -->
+        <!-- You can add other fields such as domain or context if needed -->
+    </record>
+</odoo>

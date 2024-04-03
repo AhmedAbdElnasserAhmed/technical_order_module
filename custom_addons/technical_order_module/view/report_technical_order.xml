@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Define the QWeb report template -->
+        <template id="report_technical_order">
+            <t t-call="web.basic_layout">
+                <div class="page">
+                    <div class="oe_structure"/>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Technical Order Details</h2>
+                            <table class="table table-condensed">
+                                <tr>
+                                    <th>Request Name</th>
+                                    <td><span t-field="o.name"/></td>
+                                </tr>
+                                <tr>
+                                    <th>Requested By</th>
+                                    <td><span t-field="o.requested_by.name"/></td>
+                                </tr>
+                                <!-- Add more fields as needed -->
+                            </table>
+                            <h2>Order Lines</h2>
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Description</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr t-foreach="o.order_lines" t-as="line">
+                                        <td><span t-field="line.product_id.name"/></td>
+                                        <td><span t-field="line.description"/></td>
+                                        <td><span t-field="line.quantity"/></td>
+                                        <td><span t-field="line.price"/></td>
+                                        <td><span t-field="line.total"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
